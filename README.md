@@ -85,8 +85,8 @@ works as expected. So the problem seems to appear only when we trigger it from o
 
 4. Next up tried the pre-load method. The snapcraft.yaml will look something like this:
 
-   ```
-   name: run-simp-py
+```
+name: run-simp-py
 base: core18
 version: '1.0.0'
 summary: Simple Py
@@ -112,9 +112,14 @@ python:
     python-version: python2 
     python-packages:
       - argparse==1.2.2
+      
    ```
 
-I was able to execute simple python file using `run-simp-py.runhello sample.py` successfully.  Tried doing the same with Node.js as well. It seemed to work as well. Yet for Node.js, the interfaces had to be tweaked inorder to give additional access for the snaps confined to strict. These interfaces needs to be listed under plugs for each repective app. I had to add `system-files` interface inorder to get node up and working. Link to the complete YAML file : https://github.com/drunkenlord/run-simplepy/blob/master/snapcraft.yaml
+I was able to execute simple python file using `run-simp-py.runhello sample.py` successfully.  
+Tried doing the same with Node.js as well. It seemed to work as well. Yet for Node.js, the interfaces had to be tweaked inorder to give additional access for the snaps confined to strict. 
+These interfaces needs to be listed under plugs for each repective app. 
+I had to add `system-files` interface inorder to get node up and working. 
+Link to the complete YAML file : https://github.com/drunkenlord/run-simplepy/blob/master/snapcraft.yaml
 
 5. Also, tried getting some information about the opened file descriptors when executing the `./python-bin sample.py` from inside the `/snap` inorder to see what the snap is using as "**tmp**" dir inorder to write the data to. I have used a bunch of commands and techniques. Yet, none of them were fruitful.
 

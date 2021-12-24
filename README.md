@@ -52,22 +52,24 @@ I was able to run the tests as well as start the server as expected given the in
 
    ```
    name: run-simplepy
-        base: core18
-        version: '1.0.0'
-        summary: Simple Py
-        description: |
-          Simple Py
-        grade: stable
-        confinement: strict
-        architectures:
-          - build-on: amd64
-        apps:
-          runpyapp:
-             command: /snap/run-simplepy/current/python-bin
-        parts:
-          cprog:
-            source: https://github.com/drunkenlord/run-simplepy/releases/download/v1.0.0/py.tar.gz
-            plugin: dump
+   base: core18
+   version: '1.0.0'
+   summary: Simple Py
+   description: |
+      Simple Py
+   grade: stable
+   confinement: strict
+   architectures:
+      - build-on: amd64
+      
+   apps:
+      runpyapp:
+          command: /snap/run-simplepy/current/python-bin
+          
+   parts:
+      cprog:
+          source: https://github.com/drunkenlord/run-simplepy/releases/download/v1.0.0/py.tar.gz
+          plugin: dump
    ```
 
 The py.tar.gz contains the python binary. Usage: `run-simplepy.runpyapp sample.py`. 

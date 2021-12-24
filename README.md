@@ -134,3 +134,6 @@ inorder to see if we can test the strict packages locally without deploying them
 The Forum Thread for this Issue: https://forum.snapcraft.io/t/snap-is-being-queued-for-manual-review-in-strict-confinement/27756
 
 Documentation Reference: https://snapcraft.io/docs/system-files-interface
+
+Link for repo which has files and archives based on various experiments performed :  https://github.com/KSR4599/hapi-server-snapcraft-files-archive
+TODO : Will create a readME.md for this repo as well.
